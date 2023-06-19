@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.matrix-hero-bg {
+	transform: matrix(0, -1, -1, 0, 0, 0);
+}
+
+.matrix-passionate {
+	transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.matrix-resourceful {
+	transform: matrix(0, 1, 1, 0, 0, 0);
+}
+.matrix-friendly {
+	transform: matrix(0, -1, -1, 0, 0, 0);
+}

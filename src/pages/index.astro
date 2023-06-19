@@ -1,81 +1,145 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="Designo">
+	<header class="flex items-center justify-between px-6 pt-[35px]">
+		<h1>
+			<img src="/shared/desktop/logo-dark.png" alt="Designo logo" width="202" height="27" />
+		</h1>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+		<button class="h-5 w-6 bg-[url(/shared/mobile/icon-hamburger.svg)]" aria-label="Open menu"
+		></button>
+
+		<nav class="hidden">
+			<ul>
+				<li>Our Company</li>
+				<li>Locations</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section
+			class="matrix-hero-bg relative mt-[34px] flex flex-col items-center overflow-hidden bg-peach bg-[url(/home/desktop/bg-pattern-hero-home.svg)] bg-[left_top_102px] bg-no-repeat px-6 pb-[451px] pt-20 text-center"
+		>
+			<h2 class="text-[32px]/[36px] font-medium text-white">
+				Award-winning custom designs and digital branding solutions
+			</h2>
+			<p class="mt-[14px] text-[15px]/[25px] font-normal text-white">
+				With over 10 years in the industry, we are experienced in creating fully responsive
+				websites, app design, and engaging brand experiences. Find out more about our services.
+			</p>
+			<button
+				class="mt-6 rounded-lg bg-white px-6 pb-4 pt-[18px] text-[15px]/[22px] font-medium uppercase tracking-[1px] text-dark-grey"
+				>Learn more</button
+			>
+			<div
+				class="absolute -bottom-[200px] h-[573px] w-[284px] bg-[url(/home/desktop/image-hero-phone.png)] bg-center drop-shadow-[20px_-40px_80px_rgba(93,2,2,0.5)]"
+			>
+			</div>
+		</section>
+
+		<section class="mx-6 mt-[120px] flex flex-col gap-6">
+			<Project image="image-app-design.jpg" />
+			<Project image="image-web-design.jpg" />
+			<Project image="image-graphic-design.jpg" />
+		</section>
+		<section class="mx-6 mt-[120px] flex flex-col gap-20">
+			<article class="flex flex-col items-center text-center">
+				<img
+					class="matrix-passionate bg-[url(/shared/desktop/bg-pattern-small-circle.svg)]"
+					src="/home/desktop/illustration-passionate.svg"
+					alt="Passionate"
+				/>
+				<h3 class="mt-12 text-xl font-medium uppercase tracking-[5px] text-dark-grey">
+					Passionate
+				</h3>
+				<p class="mt-8 text-base font-normal text-dark-grey">
+					Each project starts with an in-depth brand research to ensure we only create products that
+					serve a purpose. We merge art, design, and technology into exciting new solutions.
+				</p>
+			</article>
+			<article class="flex flex-col items-center text-center">
+				<img
+					class="matrix-resourceful bg-[url(/shared/desktop/bg-pattern-small-circle.svg)]"
+					src="/home/desktop/illustration-resourceful.svg"
+					alt="Resourceful"
+				/>
+				<h3 class="mt-12 text-xl font-medium uppercase tracking-[5px] text-dark-grey">
+					Resourceful
+				</h3>
+				<p class="mt-8 text-base font-normal text-dark-grey">
+					Everything that we do has a strategic purpose. We use an agile approach in all of our
+					projects and value customer collaboration. It guarantees superior results that fulfill our
+					clients&apos; needs.
+				</p>
+			</article>
+			<article class="matrix-friendly flex flex-col items-center text-center">
+				<img
+					class="bg-[url(/shared/desktop/bg-pattern-small-circle.svg)]"
+					src="/home/desktop/illustration-friendly.svg"
+					alt="Friendly"
+				/>
+				<h3 class="mt-12 text-xl font-medium uppercase tracking-[5px] text-dark-grey">Friendly</h3>
+				<p class="mt-8 text-base font-normal text-dark-grey">
+					We are a group of enthusiastic folks who know how to put people first. Our success depends
+					on our customers, and we strive to give them the best experience a company can provide.
+				</p>
+			</article>
+		</section>
+		<section class="relative z-10 mx-6 -mb-[179px] rounded-2xl bg-peach px-6 py-16 text-center">
+			<h4 class="text-[32px]/[36px] font-medium text-white">Let&apos;s talk about your project</h4>
+			<p class="mt-[6px] text-[15px]/[25px] font-normal text-white">
+				Ready to take it to the next level? Contact us today and find out how our expertise can help
+				your business grow. Get in touch
+			</p>
+			<button
+				class="mt-8 rounded-lg bg-white px-[18px] py-[17px] text-[15px]/[25px] uppercase tracking-[1px] text-dark-grey"
+				>Get in touch</button
+			>
+		</section>
+	</main>
+
+	<footer class="flex flex-col items-center gap-10 bg-black px-6 pb-16 pt-[253px] text-center">
+		<img
+			class="mb-8"
+			src="/shared/desktop/logo-light.png"
+			width="202"
+			height="27"
+			alt="designo logo"
+		/>
+		<nav class="w-full border-t-[1px] border-white border-opacity-10">
+			<ul class="mt-8 flex flex-col gap-8 text-[14px]/[14px] font-normal uppercase text-white">
+				<li>Our company</li>
+				<li>Locations</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+		<div>
+			<ul class="text-normal text-base text-white text-opacity-50">
+				<li class="font-bold">Designo Central Office</li>
+				<li>3886 Wellington Street</li>
+				<li>Toronto, Ontario M9C 3J5</li>
+			</ul>
+		</div>
+		<div>
+			<ul class="text-normal text-base text-white text-opacity-50">
+				<li class="font-bold">Contact Us (Central Office)</li>
+				<li>P : +1 253-863-8967</li>
+				<li>M : contact@designo.co</li>
+			</ul>
+		</div>
+		<div class="flex gap-4">
+			<a href="#"><img src="/shared/desktop/icon-facebook.svg" alt="facebook" /></a>
+			<a href="#"><img src="/shared/desktop/icon-youtube.svg" alt="youtube" /></a>
+			<a href="#"><img src="/shared/desktop/icon-twitter.svg" alt="twitter" /></a>
+			<a href="#"><img src="/shared/desktop/icon-pinterest.svg" alt="pinterest" /></a>
+			<a href="#"><img src="/shared/desktop/icon-instagram.svg" alt="instagram" /></a>
+		</div>
+	</footer>
+
+	<style></style>
+</Layout>
