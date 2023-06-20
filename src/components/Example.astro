@@ -1,0 +1,11 @@
+---
+const { name, para, page } = Astro.props;
+---
+
+<article>
+	<img class="rounded-t-[15px]" src=`/${page}/desktop/image-${name}.jpg` alt=`Project ${name}` />
+	<div class="rounded-b-[15px] bg-example px-[30px] py-8 text-center">
+		<h3 class="text-xl font-medium uppercase tracking-[5px] text-peach">{name}</h3>
+		<p class="mt-4 text-base font-normal text-dark-grey">{para}</p>
+	</div>
+</article>

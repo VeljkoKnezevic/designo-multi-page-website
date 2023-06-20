@@ -1,0 +1,57 @@
+---
+import Example from "../components/Example.astro";
+import Intro from "../components/Intro.astro";
+import Project from "../components/Project.astro";
+import Footer from "../layouts/Footer.astro";
+import Header from "../layouts/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Web Design | Designo">
+	<Header />
+	<main>
+		<Intro
+			page="Web"
+			para="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
+		/>
+
+		<section class="mx-6 mt-24 flex flex-col gap-10">
+			<Example
+				name="express"
+				page="web-design"
+				para="A multi-carrier shipping website for ecommerce businesses"
+			/>
+			<Example
+				name="transfer"
+				page="web-design"
+				para="Site for low-cost money transfers and sending money within seconds"
+			/>
+			<Example
+				name="photon"
+				page="web-design"
+				para="A state-of-the-art music player with high-resolution audio and DSP effects"
+			/>
+			<Example
+				name="builder"
+				page="web-design"
+				para="Connects users with local contractors based on their location"
+			/>
+			<Example
+				name="blogr"
+				page="web-design"
+				para="Blogr is a platform for creating an online blog or publication"
+			/>
+			<Example
+				name="camp"
+				page="web-design"
+				para="Get expert training in coding, data, design, and digital marketing"
+			/>
+		</section>
+
+		<section class="mx-6 mt-24 flex flex-col gap-6">
+			<Project name="app" />
+			<Project name="graphic" />
+		</section>
+	</main>
+	<Footer />
+</Layout>

@@ -1,12 +1,18 @@
 ---
-const { image } = Astro.props;
+const { name } = Astro.props;
 ---
 
-<button class=`h-[250px] w-[327px] rounded-2xl bg-[url(/home/mobile/${image})]`>
+<a
+	href=`${name}-design`
+	class="h-[250px] w-[327px] rounded-2xl"
+	style=`background-image: url(/home/mobile/image-${name}-design.jpg)`
+>
 	<div
 		class="flex h-full w-full flex-col items-center justify-center rounded-2xl backdrop-brightness-50"
 	>
-		<h2 class="text-[28px]/[36px] font-medium uppercase tracking-[1.4px] text-white">Web Design</h2>
+		<h2 class="text-[28px]/[36px] font-medium uppercase tracking-[1.4px] text-white">
+			{name} design
+		</h2>
 		<div class="flex items-center gap-4">
 			<p class="text-[15px]/[22px] font-normal uppercase tracking-[5px] text-white">
 				View Projects
@@ -14,4 +20,4 @@ const { image } = Astro.props;
 			<img src="/shared/desktop/icon-right-arrow.svg" alt="View Projects" />
 		</div>
 	</div>
-</button>
+</a>

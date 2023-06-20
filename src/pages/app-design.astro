@@ -1,0 +1,52 @@
+---
+import Example from "../components/Example.astro";
+import Intro from "../components/Intro.astro";
+import Project from "../components/Project.astro";
+import Footer from "../layouts/Footer.astro";
+import Header from "../layouts/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="App Design | Designo">
+	<Header />
+	<main>
+		<Intro
+			page="App"
+			para="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."
+		/>
+
+		<section class="mx-6 mt-24 flex flex-col gap-10">
+			<Example
+				name="airfilter"
+				page="app-design"
+				para="Solving the problem of poor indoor air quality by filtering the air"
+			/>
+			<Example
+				name="eyecam"
+				page="app-design"
+				para="Product that lets you edit your favorite photos and videos at any time"
+			/>
+			<Example
+				name="faceit"
+				page="app-design"
+				para="Get to meet your favorite internet superstar with the faceit app"
+			/>
+			<Example
+				name="todo"
+				page="app-design"
+				para="A todo app that features cloud sync with light and dark mode"
+			/>
+			<Example
+				name="loopstudios"
+				page="app-design"
+				para="A VR experience app made for Loopstudios"
+			/>
+		</section>
+
+		<section class="mx-6 mt-24 flex flex-col gap-6">
+			<Project name="web" />
+			<Project name="graphic" />
+		</section>
+	</main>
+	<Footer />
+</Layout>

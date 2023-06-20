@@ -1,26 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Project from "../components/Project.astro";
+import Header from "../layouts/Header.astro";
+import Footer from "../layouts/Footer.astro";
 ---
 
-<Layout title="Designo">
-	<header class="flex items-center justify-between px-6 pt-[35px]">
-		<h1>
-			<img src="/shared/desktop/logo-dark.png" alt="Designo logo" width="202" height="27" />
-		</h1>
-
-		<button class="h-5 w-6 bg-[url(/shared/mobile/icon-hamburger.svg)]" aria-label="Open menu"
-		></button>
-
-		<nav class="hidden">
-			<ul>
-				<li>Our Company</li>
-				<li>Locations</li>
-				<li>Contact</li>
-			</ul>
-		</nav>
-	</header>
-
+<Layout title="Home | Designo">
+	<Header />
 	<main>
 		<section
 			class="matrix-hero-bg relative mt-[34px] flex flex-col items-center overflow-hidden bg-peach bg-[url(/home/desktop/bg-pattern-hero-home.svg)] bg-[left_top_102px] bg-no-repeat px-6 pb-[451px] pt-20 text-center"
@@ -43,9 +29,9 @@ import Project from "../components/Project.astro";
 		</section>
 
 		<section class="mx-6 mt-[120px] flex flex-col gap-6">
-			<Project image="image-app-design.jpg" />
-			<Project image="image-web-design.jpg" />
-			<Project image="image-graphic-design.jpg" />
+			<Project name="web" />
+			<Project name="app" />
+			<Project name="graphic" />
 		</section>
 		<section class="mx-6 mt-[120px] flex flex-col gap-20">
 			<article class="flex flex-col items-center text-center">
@@ -90,56 +76,6 @@ import Project from "../components/Project.astro";
 				</p>
 			</article>
 		</section>
-		<section class="relative z-10 mx-6 -mb-[179px] rounded-2xl bg-peach px-6 py-16 text-center">
-			<h4 class="text-[32px]/[36px] font-medium text-white">Let&apos;s talk about your project</h4>
-			<p class="mt-[6px] text-[15px]/[25px] font-normal text-white">
-				Ready to take it to the next level? Contact us today and find out how our expertise can help
-				your business grow. Get in touch
-			</p>
-			<button
-				class="mt-8 rounded-lg bg-white px-[18px] py-[17px] text-[15px]/[25px] uppercase tracking-[1px] text-dark-grey"
-				>Get in touch</button
-			>
-		</section>
 	</main>
-
-	<footer class="flex flex-col items-center gap-10 bg-black px-6 pb-16 pt-[253px] text-center">
-		<img
-			class="mb-8"
-			src="/shared/desktop/logo-light.png"
-			width="202"
-			height="27"
-			alt="designo logo"
-		/>
-		<nav class="w-full border-t-[1px] border-white border-opacity-10">
-			<ul class="mt-8 flex flex-col gap-8 text-[14px]/[14px] font-normal uppercase text-white">
-				<li>Our company</li>
-				<li>Locations</li>
-				<li>Contact</li>
-			</ul>
-		</nav>
-		<div>
-			<ul class="text-normal text-base text-white text-opacity-50">
-				<li class="font-bold">Designo Central Office</li>
-				<li>3886 Wellington Street</li>
-				<li>Toronto, Ontario M9C 3J5</li>
-			</ul>
-		</div>
-		<div>
-			<ul class="text-normal text-base text-white text-opacity-50">
-				<li class="font-bold">Contact Us (Central Office)</li>
-				<li>P : +1 253-863-8967</li>
-				<li>M : contact@designo.co</li>
-			</ul>
-		</div>
-		<div class="flex gap-4">
-			<a href="#"><img src="/shared/desktop/icon-facebook.svg" alt="facebook" /></a>
-			<a href="#"><img src="/shared/desktop/icon-youtube.svg" alt="youtube" /></a>
-			<a href="#"><img src="/shared/desktop/icon-twitter.svg" alt="twitter" /></a>
-			<a href="#"><img src="/shared/desktop/icon-pinterest.svg" alt="pinterest" /></a>
-			<a href="#"><img src="/shared/desktop/icon-instagram.svg" alt="instagram" /></a>
-		</div>
-	</footer>
-
-	<style></style>
+	<Footer />
 </Layout>

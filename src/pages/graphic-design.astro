@@ -1,0 +1,66 @@
+---
+import Example from "../components/Example.astro";
+import Intro from "../components/Intro.astro";
+import Project from "../components/Project.astro";
+import Footer from "../layouts/Footer.astro";
+import Header from "../layouts/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Graphic Design | Designo">
+	<Header />
+	<main>
+		<Intro
+			page="Graphic"
+			para="We deliver eye-catching branding materials that are tailored to meet your business objectives."
+		/>
+
+		<section class="mx-6 mt-24 flex flex-col gap-10">
+			<article>
+				<img
+					class="rounded-t-[15px]"
+					src=`/graphic-design/desktop/image-change.jpg`
+					alt=`Project change`
+				/>
+				<div class="rounded-b-[15px] bg-example px-[30px] py-8 text-center">
+					<h3 class="text-xl font-medium uppercase tracking-[5px] text-peach">Tim brown</h3>
+					<p class="mt-4 text-base font-normal text-dark-grey">
+						A book cover designed for Tim Brown’s new release, ‘Change’
+					</p>
+				</div>
+			</article>
+			<article>
+				<img
+					class="rounded-t-[15px]"
+					src=`/graphic-design/desktop/image-boxed-water.jpg`
+					alt=`Project boxed water`
+				/>
+				<div class="rounded-b-[15px] bg-example px-[30px] py-8 text-center">
+					<h3 class="text-xl font-medium uppercase tracking-[5px] text-peach">Boxed Water</h3>
+					<p class="mt-4 text-base font-normal text-dark-grey">
+						A simple packaging concept made for Boxed Water
+					</p>
+				</div>
+			</article>
+			<article>
+				<img
+					class="rounded-t-[15px]"
+					src=`/graphic-design/desktop/image-science.jpg`
+					alt=`Project science`
+				/>
+				<div class="rounded-b-[15px] bg-example px-[30px] py-8 text-center">
+					<h3 class="text-xl font-medium uppercase tracking-[5px] text-peach">science!</h3>
+					<p class="mt-4 text-base font-normal text-dark-grey">
+						A poster made in collaboration with the Federal Art Project
+					</p>
+				</div>
+			</article>
+		</section>
+
+		<section class="mx-6 mt-24 flex flex-col gap-6">
+			<Project name="app" />
+			<Project name="web" />
+		</section>
+	</main>
+	<Footer />
+</Layout>
